@@ -1,0 +1,118 @@
+:root {
+  /* Spa / Forest / Charcoal Palette */
+  --bg-nature-dark: #122616;
+  /* Deep forest night black/green */
+  --bg-terminal-glass: rgba(22, 38, 22, 0.92);
+  /* Dark mossy green glass */
+
+  --color-green-neon: #96e072;
+  /* Vibrant fresh leaf green */
+  --color-green-leaf: #69b552;
+  /* Fresh produce green */
+  --color-red-tomato: #db5042;
+  /* Organic tomato / terra-cotta */
+  --color-yellow-lemon: #decd59;
+  /* Sun/Lemon/Wheat yellow */
+
+  --color-soil-brown: #111412;
+  /* Dark spa charcoal (replaces soil) */
+  --color-bark-brown: #212623;
+  /* Smooth dark gray (replaces bark) */
+  --color-wood-light: #3b453e;
+  /* Medium slate gray (replaces wood light) */
+
+  --text-main: #d0edd3;
+  /* soft greenish tint for readability */
+  --text-muted: #8ab08e;
+  /* faded foliage */
+
+  --border-glow: rgba(150, 224, 114, 0.3);
+  --border-glow-intense: rgba(150, 224, 114, 0.6);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-soil-brown);
+  background-image:
+    radial-gradient(circle at center, rgba(14, 20, 16, 0.3) 0%, rgba(14, 20, 16, 0.8) 100%),
+    url('/day_spa_leaves.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-mono), monospace;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-yellow-lemon);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-green-neon);
+  text-shadow: 0 0 8px var(--color-green-neon);
+}
+
+.app-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Animations */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.2em;
+  background-color: var(--color-green-neon);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+  box-shadow: 0 0 5px var(--color-green-neon);
+}
+
+.glow-text {
+  color: var(--color-green-neon);
+  text-shadow: 0 0 10px rgba(150, 224, 114, 0.4);
+}
+
+.glow-tomato {
+  color: var(--color-red-tomato);
+  text-shadow: 0 0 10px rgba(219, 80, 66, 0.4);
+}
+
+.glow-lemon {
+  color: var(--color-yellow-lemon);
+  text-shadow: 0 0 10px rgba(222, 205, 89, 0.4);
+}

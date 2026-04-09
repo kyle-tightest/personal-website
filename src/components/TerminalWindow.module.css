@@ -1,0 +1,77 @@
+.terminalWindow {
+    width: 90vw;
+    max-width: 1200px;
+    height: 85vh;
+    /* Greenhouse / Wooden Frame look */
+    background: var(--bg-terminal-glass);
+    border: 10px solid var(--color-bark-brown);
+    border-radius: 6px;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), 0 25px 60px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.terminalHeader {
+    height: 40px;
+    background: var(--color-soil-brown);
+    border-bottom: 2px solid var(--color-wood-light);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Make buttons look a bit like little berries */
+.button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    background-color: var(--color-red-tomato);
+}
+
+.minimize {
+    background-color: var(--color-yellow-lemon);
+}
+
+.maximize {
+    background-color: var(--color-green-leaf);
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-yellow-lemon);
+    font-size: 0.9rem;
+}
+
+.terminalBody {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, rgba(150, 224, 114, 0.05), transparent);
+    pointer-events: none;
+    animation: scanline 8s linear infinite;
+    z-index: 50;
+}

@@ -1,0 +1,220 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px dashed var(--color-wood-light);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  color: var(--color-green-leaf);
+  margin: 0;
+}
+
+.heroDesc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+.asciiArt {
+  margin-top: 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--color-yellow-lemon);
+  white-space: pre-wrap;
+  line-height: 1.2;
+  text-shadow: 0 0 5px rgba(222, 205, 89, 0.5);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.serviceCard {
+  border: 4px solid var(--color-bark-brown);
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: var(--color-soil-brown);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  border-top-width: 8px;
+  border-top-color: var(--color-green-leaf);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--color-green-neon);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.serviceCard h3 {
+  color: var(--color-yellow-lemon);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.serviceCard p {
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-left: 4px solid var(--color-red-tomato);
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.commit {
+  position: relative;
+  cursor: pointer;
+}
+
+.commit::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  background: #1D4ED8;
+  border: 2px solid var(--color-bark-brown);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(29, 78, 216, 0.6);
+}
+
+.timeline>.commit:first-child::before {
+  background: var(--color-yellow-lemon);
+  border-color: var(--color-bark-brown);
+  box-shadow: 0 0 10px var(--color-yellow-lemon);
+}
+
+.commitInner {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  margin-left: -1rem;
+  /* alignment */
+}
+
+.commitInner:hover {
+  background-color: rgba(222, 205, 89, 0.05);
+  /* very faint lemon tint */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.commitDetails {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px dashed var(--color-yellow-lemon);
+  border-radius: 4px;
+  color: var(--text-main);
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 0.95rem;
+}
+
+.commitDetails ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.commitDetails li {
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.commitHash {
+  font-size: 0.9rem;
+  color: var(--color-yellow-lemon);
+  margin-bottom: 0.5rem;
+}
+
+.commitInfo h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-green-leaf);
+}
+
+.commitInfo p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-mono);
+  background: rgba(33, 38, 35, 0.5);
+  /* dark slate gray background */
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-wood-light);
+  white-space: pre-wrap;
+}
+
+.fileList li {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.fileList li:hover {
+  opacity: 1;
+}
+
+.fileName {
+  color: var(--color-green-neon);
+  text-decoration: underline;
+  cursor: pointer;
+}

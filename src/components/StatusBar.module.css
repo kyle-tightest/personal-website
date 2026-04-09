@@ -1,0 +1,54 @@
+.statusBar {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    display: flex;
+    justify-content: space-between;
+    /* Earthy dirt floor bottom status bar */
+    background: var(--color-bark-brown);
+    border-top: 2px solid var(--color-wood-light);
+    color: var(--color-yellow-lemon);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.left {
+    display: flex;
+    gap: 1rem;
+}
+
+.mode {
+    background: var(--color-green-leaf);
+    color: var(--bg-nature-dark);
+    padding: 0 8px;
+    border-radius: 2px;
+}
+
+.right {
+    display: flex;
+    gap: 1rem;
+}
+
+.right a {
+    color: var(--text-main);
+}
+
+.right a:hover {
+    color: var(--color-green-neon);
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .statusBar {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        bottom: -40px;
+    }
+}
