@@ -11,8 +11,8 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Organic Code | Backend & Infrastructure",
-  description: "Personal website offering artisanal, hand-written code by a seasoned backend software developer.",
+  title: "Organic Code Farm",
+  description: "OCF.",
 };
 
 export default function RootLayout({
