@@ -4,6 +4,7 @@ import "./globals.css";
 import TerminalWindow from "@/components/TerminalWindow";
 import Navigation from "@/components/Navigation";
 import StatusBar from "@/components/StatusBar";
+import { Analytics } from "@vercel/analytics/next"
 
 const firaCode = Fira_Code({
   variable: "--font-mono",
@@ -33,6 +34,7 @@ export default function RootLayout({
           </div>
         </main>
       </body>
+      <Analytics />
     </html>
   );
 }
